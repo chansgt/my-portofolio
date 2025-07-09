@@ -116,6 +116,13 @@ section h2 {
     font-size: 2rem;
   }
 }
+.skills, .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
 </style>
 </head>
 <body>
@@ -209,6 +216,7 @@ section h2 {
 
 <section id="skills">
   <h2>Skills</h2>
+  <div class="skills">
     <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt=""><b>Java</b></div>
     <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg" alt=""><b>JavaScript</b></div>
     <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt=""><b>Python</b></div>
@@ -225,6 +233,7 @@ section h2 {
     <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt=""><b>Jenkins</b></div>
     <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt=""><b>Kubernetes</b></div>
     <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt=""><b>Docker</b></div>
+  </div>
 </section>
 
 <section id="certificates">
