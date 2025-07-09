@@ -96,7 +96,7 @@ header .toggle {
   color: var(--text);
 }
   
-.hightlight:hover {
+.highlight:hover {
   color: #05ed43;
 }
 .container {
@@ -243,7 +243,7 @@ a:hover {
   
 <div class="hero">
   <h1>
-    Securing your <span class="highlight">Environment</span> and turning your ideas into <span class="highlight">Real Life</span> is my job.
+    Securing your <span class="highlight security">Environment</span> and turning your ideas into <span class="highlight developer">Real Life</span> is my job.
   </h1>
   <div class="arrow-down">
     <a href="#introduction">
@@ -423,6 +423,26 @@ window.addEventListener('scroll', () => {
       section.classList.add('visible');
     }
   });
+});
+
+const highlight = document.querySelector('.security');
+
+highlight.addEventListener('mouseenter', () => {
+  highlight.textContent = 'SECURITY';
+});
+
+highlight.addEventListener('mouseleave', () => {
+  highlight.textContent = 'Environment';
+});
+
+const highlight = document.querySelector('.developer');
+
+highlight.addEventListener('mouseenter', () => {
+  highlight.textContent = 'DEVELOPER';
+});
+
+highlight.addEventListener('mouseleave', () => {
+  highlight.textContent = 'Real Life';
 });
 </script>
   
