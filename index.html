@@ -11,9 +11,187 @@
   --text: #fff;
   --highlight: #a855f7;
 }
-body.light {
-  --bg: #fff;
-  --text: #000;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  text-align: center;
+  padding: 10rem 1rem 3rem;
+}
+header h1 {
+  font-size: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+header .highlight {
+  color: var(--highlight);
+}
+header .links {
+  margin-top: 2rem;
+}
+header .links a {
+  color: var(--highlight);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+header .links a:hover {
+  color: var(--text);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  color: #2575fc;
+  margin-bottom: 1rem;
+}
+
+.skills-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.skills-grid img, .projects-grid img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.skills-grid div, .projects-grid div {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #999;
+  background: #000;
+  color: #fff;
+  margin-top: 2rem;
+}
+a {
+  color: #2575fc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>
+    turning ideas into real life <span class="highlight">products</span> is my calling.
+  </h1>
+  <div class="links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+  </div>
+</header>
+
+<div class="container">
+<section id="skills">
+  <h2>Skills</h2>
+  <h3>Programming Languages</h3>
+  <div class="skills-grid">
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt=""><br>Java</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg" alt=""><br>JavaScript</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt=""><br>Python</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/php.svg" alt=""><br>PHP</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spring.svg" alt=""><br>Spring Boot</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/csharp.svg" alt=""><br>C#</div>
+  </div>
+
+  <h3>Scripting</h3>
+  <div class="skills-grid">
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powershell.svg" alt=""><br>PowerShell</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gnubash.svg" alt=""><br>Bash</div>
+  </div>
+
+  <h3>Database</h3>
+  <div class="skills-grid">
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt=""><br>MySQL</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/oracle.svg" alt=""><br>Oracle DB</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftsqlserver.svg" alt=""><br>MSSQL</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt=""><br>PostgreSQL</div>
+  </div>
+
+  <h3>Tools</h3>
+  <div class="skills-grid">
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" alt=""><br>Ansible</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt=""><br>Jenkins</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/redhatopenshift.svg" alt=""><br>Openshift</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt=""><br>Kubernetes</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt=""><br>Docker</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/podman.svg" alt=""><br>Podman</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/bamboo.svg" alt=""><br>Bamboo</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div><img src="scrapping.png" alt=""><br>Website Scraping Script</div>
+    <div><img src="ds.png" alt=""><br>Digital Signage Web</div>
+    <div><img src="i-mec.png" alt=""><br><a href="https://i-mec.id" target="_blank">i-mec.id</a></div>
+    <div><img src="vistakom.png" alt=""><br><a href="https://vistakom-infomedia.com" target="_blank">vistakom-infomedia</a></div>
+    <div><img src="udrive.png" alt=""><br><a href="https://udrive.co.id" target="_blank">udrive.co.id</a></div>
+    <div><img src="acc.jpg" alt=""><br>CyberArk PAM — ACC</div>
+    <div><img src="bca.png" alt=""><br>CyberArk PAM — BCA</div>
+    <div><img src="hibank.png" alt=""><br>CyberArk PAM — Hibank</div>
+    <div><img src="dharma.jpg" alt=""><br>Xage Security — PoC</div>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="projects-grid">
+    <div><img src="aqua.png" alt=""><br>Aqua Security</div>
+    <div><img src="silverfort.jpg" alt=""><br>Silverfort</div>
+    <div><img src="xage.png" alt=""><br>Xage Security</div>
+    <div><img src="cyberark.png" alt=""><br>CyberArk CDE</div>
+  </div>
+</section>
+</div>
+
+<footer>
+  &copy; 2025 Chandra. All rights reserved.
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chandra | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #000;
+  --text: #fff;
   --highlight: #a855f7;
 }
 body {
@@ -21,288 +199,171 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
-  scroll-behavior: smooth;
 }
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.8);
-  color: #fff;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-header .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-header nav {
-  display: flex;
-  gap: 1rem;
-}
-header nav a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
-}
-header .toggle {
-  cursor: pointer;
-}
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 0 1rem;
+  padding: 10rem 1rem 3rem;
 }
-.hero h1 {
+header h1 {
   font-size: 3rem;
   max-width: 700px;
+  margin: 0 auto;
 }
-.hero .highlight {
+header .highlight {
   color: var(--highlight);
 }
-.hero .links {
+header .links {
   margin-top: 2rem;
 }
-.hero .links a {
-  margin: 0 1rem;
+header .links a {
   color: var(--highlight);
   text-decoration: none;
+  margin: 0 1rem;
   font-weight: bold;
-  transition: color 0.3s;
 }
-.hero .links a:hover {
+header .links a:hover {
   color: var(--text);
 }
-section {
-  padding: 4rem 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 2rem;
 }
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-section h2 {
-  color: var(--highlight);
+
+h2 {
   text-align: center;
+  color: #2575fc;
   margin-bottom: 1rem;
 }
-@media(max-width: 768px) {
-  header nav {
-    display: none;
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 3rem;
-    right: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-  }
-  header nav.show {
-    display: flex;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-.skills, .projects {
+
+.skills-grid, .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1rem;
-  text-align: center;
+  justify-items: center;
 }
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+
+.skills-grid img, .projects-grid img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.skills-grid div, .projects-grid div {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #999;
+  background: #000;
+  color: #fff;
+  margin-top: 2rem;
+}
+a {
+  color: #2575fc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo">Chandra</div>
-  <nav id="nav">
-    <a href="#projects">Projects</a>
+  <h1>
+    turning ideas into real life <span class="highlight">products</span> is my calling.
+  </h1>
+  <div class="links">
     <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
     <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div>
-    <span class="toggle" id="themeToggle">🌓</span>
-    <span class="toggle" id="menuToggle">☰</span>
   </div>
 </header>
 
-<div class="hero">
-  <h1>
-    Secure your <span class="highlight">Environment</span> and turning your idea <span class="highlight">into real life</span>.
-  </h1>
-  <div class="links">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
+<div class="container">
+<section id="skills">
+  <h2>Skills</h2>
+  <h3>Programming Languages</h3>
+  <div class="skills-grid">
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt=""><br>Java</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg" alt=""><br>JavaScript</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt=""><br>Python</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/php.svg" alt=""><br>PHP</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spring.svg" alt=""><br>Spring Boot</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/csharp.svg" alt=""><br>C#</div>
   </div>
-</div>
+
+  <h3>Scripting</h3>
+  <div class="skills-grid">
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powershell.svg" alt=""><br>PowerShell</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gnubash.svg" alt=""><br>Bash</div>
+  </div>
+
+  <h3>Database</h3>
+  <div class="skills-grid">
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt=""><br>MySQL</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/oracle.svg" alt=""><br>Oracle DB</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftsqlserver.svg" alt=""><br>MSSQL</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt=""><br>PostgreSQL</div>
+  </div>
+
+  <h3>Tools</h3>
+  <div class="skills-grid">
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" alt=""><br>Ansible</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt=""><br>Jenkins</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/redhatopenshift.svg" alt=""><br>Openshift</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt=""><br>Kubernetes</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt=""><br>Docker</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/podman.svg" alt=""><br>Podman</div>
+    <div><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/bamboo.svg" alt=""><br>Bamboo</div>
+  </div>
+</section>
 
 <section id="projects">
   <h2>Projects</h2>
-      <div class="project-card">
-        <img class="logo" src="scrapping.png" alt="scrapping">
-        Create script for scrapping Website
-      </div>
-      <div class="project-card">
-        <img class="logo" src="ds.png" alt="ds">
-        Develop website for modify and implement Digital Signage
-      </div>
-      <div class="project-card">
-        <img class="logo" src="i-mec.png" alt="i-mec.id">
-        <a href="https://i-mec.id" target="_blank">Develop website i-mec.id</a>
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="vistakom.png" alt="vistakom">
-        <a href="https://vistakom-infomedia.com"  target="_blank">Develop company profile vistakom-infomedia</a>
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="udrive.png" alt="udrive">
-        <a href="https://udrive.co.id"  target="_blank">Develop company profile udrive.co.id</a>
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="acc.jpg" alt="ACC">
-        Assistant Engineer for implementation CyberArk PAM
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="bca.png" alt="BCA">
-        Assistant Engineer for implementation CyberArk PAM
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="bca.png" alt="BCA">
-        Lead Engineer for implementation CyberArk Secrets Manager CP/CCP
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="bca.png" alt="BCA">
-        Lead Engineer for implementation CyberArk Secrets Manager Conjur
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="hibank.png" alt="Hibank">
-        Lead Engineer for implementation CyberArk PAM
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="bri.png" alt="BRI">
-        Assistant Engineer for implementation CyberArk Secrets Manager Conjur
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="dharma.jpg" alt="Dharma">
-        Lead Engineer for PoC Xage Security
-      </div>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt=""><b>Java</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg" alt=""><b>JavaScript</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt=""><b>Python</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/php.svg" alt=""><b>PHP</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spring.svg" alt=""><b>Spring Boot</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/csharp.svg" alt=""><b>C#</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powershell.svg" alt=""><b>PowerShell</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gnubash.svg" alt=""><b>Bash</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt=""><b>MySQL</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/oracle.svg" alt=""><b>Oracle</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftsqlserver.svg" alt=""><b>MSSQL</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt=""><b>PostgreSQL</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" alt=""><b>Ansible</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt=""><b>Jenkins</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt=""><b>Kubernetes</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt=""><b>Docker</b></div>
+  <div class="projects-grid">
+    <div><img src="scrapping.png" alt=""><br>Website Scraping Script</div>
+    <div><img src="ds.png" alt=""><br>Digital Signage Web</div>
+    <div><img src="i-mec.png" alt=""><br><a href="https://i-mec.id" target="_blank">i-mec.id</a></div>
+    <div><img src="vistakom.png" alt=""><br><a href="https://vistakom-infomedia.com" target="_blank">vistakom-infomedia</a></div>
+    <div><img src="udrive.png" alt=""><br><a href="https://udrive.co.id" target="_blank">udrive.co.id</a></div>
+    <div><img src="acc.jpg" alt=""><br>CyberArk PAM — ACC</div>
+    <div><img src="bca.png" alt=""><br>CyberArk PAM — BCA</div>
+    <div><img src="hibank.png" alt=""><br>CyberArk PAM — Hibank</div>
+    <div><img src="dharma.jpg" alt=""><br>Xage Security — PoC</div>
   </div>
 </section>
 
 <section id="certificates">
   <h2>Certificates</h2>
   <div class="projects-grid">
-    
-    <div class="project-card">
-      <img class="logo" src="aqua.png" alt="aqua">
-      <b>Implementation Specialist — Aqua Security</b>
-    </div>
-
-    <div class="project-card">
-      <img class="logo" src="silverfort.jpg" alt="silverfort">
-      <b>Presales Engineer — Silverfort</b>
-    </div>
-    
-    <div class="project-card">
-      <img class="logo" src="xage.png" alt="xage">
-      <b>Implementation Specialist — Silverfort</b>
-    </div>
-    
-    <div class="project-card">
-      <img class="logo" src="cyberark.png" alt="CyberArk Trustee">
-      <b>Trustee — CyberArk PAM</b>
-    </div>
-
-    <div class="project-card">
-      <img class="logo" src="cyberark.png" alt="CyberArk Defender">
-      <b>Defender — CyberArk PAM</b>
-    </div>
-
-    <div class="project-card">
-      <img class="logo" src="cyberark.png" alt="CyberArk Sentry">
-      <b>Sentry — CyberArk Secrets Manager</b>
-    </div>
-
-    <div class="project-card">
-      <img class="logo" src="cyberark.png" alt="CyberArk CDE">
-      <b>CDE — CyberArk Secrets Manager</b>
-    </div>
+    <div><img src="aqua.png" alt=""><br>Implementation Specialist — Aqua Security</div>
+    <div><img src="silverfort.jpg" alt=""><br>Presales Engineer — Silverfort/div>
+    <div><img src="xage.png" alt=""><br>Implementation Specialist — Xage Security</div>
+    <div><img src="cyberark.png" alt=""><br>Trustee — CyberArk PAM</div>
+    <div><img src="cyberark.png" alt=""><br>Defender — CyberArk PAM</div>
+    <div><img src="cyberark.png" alt=""><br>Sentry — CyberArk Secrets Manager</div>
+    <div><img src="cyberark.png" alt=""><br>CDE — CyberArk Secrets Manager</div>
+  </div>
 </section>
+</div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: chandrasugiatno60@gmail.com</p>
-</section>
-
-<script>
-const themeToggle = document.getElementById('themeToggle');
-themeToggle.onclick = () => {
-  document.body.classList.toggle('light');
-};
-
-// hamburger
-const menuToggle = document.getElementById('menuToggle');
-const nav = document.getElementById('nav');
-menuToggle.onclick = () => {
-  nav.classList.toggle('show');
-};
-
-// fade-in animation
-window.addEventListener('scroll', () => {
-  document.querySelectorAll('section').forEach(section => {
-    if (section.getBoundingClientRect().top < window.innerHeight - 50) {
-      section.classList.add('visible');
-    }
-  });
-});
-</script>
+<footer>
+  &copy; 2025 Chandra. All rights reserved.
+</footer>
 
 </body>
 </html>
