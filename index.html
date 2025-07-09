@@ -425,25 +425,18 @@ window.addEventListener('scroll', () => {
   });
 });
 
-const highlight = document.querySelector('.security');
-
-highlight.addEventListener('mouseenter', () => {
-  highlight.textContent = 'SECURITY';
+document.querySelectorAll('.security').forEach(el => {
+  const original = el.textContent;
+  el.addEventListener('mouseenter', () => el.textContent = 'SECURITY');
+  el.addEventListener('mouseleave', () => el.textContent = original);
 });
 
-highlight.addEventListener('mouseleave', () => {
-  highlight.textContent = 'Environment';
+document.querySelectorAll('.developer').forEach(el => {
+  const original = el.textContent;
+  el.addEventListener('mouseenter', () => el.textContent = 'DEVELOPER');
+  el.addEventListener('mouseleave', () => el.textContent = original);
 });
-
-const highlight = document.querySelector('.developer');
-
-highlight.addEventListener('mouseenter', () => {
-  highlight.textContent = 'DEVELOPER';
-});
-
-highlight.addEventListener('mouseleave', () => {
-  highlight.textContent = 'Real Life';
-});
+  
 </script>
   
 </body>
