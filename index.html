@@ -3,259 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Profile</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>Chandra | Developer & IT Security Consultant</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #333; }
-  header { background: linear-gradient(135deg, #6a11cb, #2575fc); color: white; padding: 3rem 1rem; text-align: center; }
-  header h1 { margin: 0; font-size: 3rem; }
-  header p { margin-top: 0.5rem; font-size: 1.2rem; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: white;
+}
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
 
-  .socials a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    border: 2px solid #fff;
-    padding: 0.3rem 0.8rem;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: transparent;
-    transition: all 0.3s ease;
-  }
-  .socials a:hover {
-    background: #2575fc;
-    color: #fff;
-  }
-  .socials img {
-    width: 20px;
-    height: 20px;
-  }
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-  .container { max-width: 1000px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-  section { margin-bottom: 2rem; }
-  h2 { color: #2575fc; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+section {
+  margin-bottom: 3rem;
+}
 
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-  .project-card { background: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: transform 0.2s; }
-  .project-card:hover { transform: translateY(-5px); }
-  .project-card img.logo { width: 40px; height: 40px; object-fit: contain; display: block; margin-bottom: 0.5rem; }
-  .project-card a { color: #2575fc; font-weight: bold; text-decoration: none; }
-  .project-card a:hover { text-decoration: underline; }
+h2 {
+  text-align: center;
+  color: #66a6ff;
+  margin-bottom: 1rem;
+}
 
-    .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    gap: 8px; /* lebih rapat */
-  }
-  
-  .skills-grid img.logo {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-  }
-  
-  .project-card img.logo {
+.skills, .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.card.visible {
+  opacity: 1;
+  transform: none;
+}
+.card img {
   width: 40px;
   height: 40px;
   object-fit: contain;
-  display: block;
   margin-bottom: 0.5rem;
 }
-  .skills-grid img.logo {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+.card b {
+  display: block;
+  margin-top: 0.5rem;
 }
-  
-  footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #999; }
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+a {
+  color: #66a6ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.socials {
+  margin-top: 1rem;
+}
+.socials a {
+  margin: 0 0.5rem;
+  color: white;
+  font-weight: bold;
+}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Hi, my name is Chandra</h1>
-  <p>Developer and Consultant IT Security</p>
-
-<div class="socials">
-  <a href="https://www.linkedin.com/in/chandra-sugiatno-m" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
-    LinkedIn
-  </a>
-  <a href="https://github.com/chansgt" target="_blank">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
-    GitHub
-  </a>
-</div>
-  
+  <img src="foto.jpg" alt="Chandra">
+  <h1>Hi, I’m Chandra</h1>
+  <p>Developer & IT Security Consultant</p>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/chandra-sugiatno-m" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/chansgt" target="_blank">GitHub</a>
+  </div>
 </header>
 
 <div class="container">
-  <section>
-    <h2>Introduction</h2>
-    <p style="text-align: left; max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.6;">
-      Hi, my name is Chandra. I am passionate about IT, especially programming, and I have experience in security products.
-      I always remember what my lecturer said back in college:
-    </p>
-    <p style="text-align: center; font-size: 1.3rem; font-weight: bold; margin-top: 1rem; color: #2575fc;">
-      “You never try, you never know”
-    </p>
-    <p style="text-align: left; max-width: 800px; margin: 1rem auto 0; font-size: 1.1rem; line-height: 1.6;">
-      This has been my guiding principle in carrying out every job and task.
-    </p>
-  </section>
-  <section>
-    <h2>Skills</h2>
-  
-    <h3 style="color:#2575fc;">Programming Languages</h3>
-    <div class="skills-grid">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt="Java">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg" alt="JavaScript">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/php.svg" alt="PHP">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spring.svg" alt="Java Spring Boot">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/csharp.svg" alt="C#">
-    </div>
-  
-    <h3 style="color:#2575fc;">Scripting</h3>
-    <div class="skills-grid">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powershell.svg" alt="PowerShell">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gnubash.svg" alt="Bash">
-    </div>
-  
-    <h3 style="color:#2575fc;">Database</h3>
-    <div class="skills-grid">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt="MySQL">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/oracle.svg" alt="Oracle DB">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftsqlserver.svg" alt="MSSQL">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt="PostgreSQL">
-    </div>
-  
-    <h3 style="color:#2575fc;">Tools</h3>
-    <div class="skills-grid">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" alt="Ansible">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt="Jenkins">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/redhatopenshift.svg" alt="Openshift">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt="Kubernetes">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt="Docker">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/podman.svg" alt="Podman">
-      <img class="logo" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/bamboo.svg" alt="Bamboo">
-    </div>
-  </section>
-  <section>
-    <h2>Project</h2>
-    <div class="projects-grid">
-      
-      <div class="project-card">
-        <img class="logo" src="scrapping.png" alt="scrapping">
-        Create script for scrapping Website
-      </div>
-      <div class="project-card">
-        <img class="logo" src="ds.png" alt="ds">
-        Develop website for modify and implement Digital Signage
-      </div>
-      <div class="project-card">
-        <img class="logo" src="i-mec.png" alt="i-mec.id">
-        <a href="https://i-mec.id" target="_blank">Develop website i-mec.id</a>
-      </div>
 
-      <div class="project-card">
-        <img class="logo" src="vistakom.png" alt="vistakom">
-        <a href="https://vistakom-infomedia.com"  target="_blank">Develop company profile vistakom-infomedia</a>
-      </div>
+<section>
+  <h2>Introduction</h2>
+  <p style="text-align:center; max-width:600px; margin:0 auto;">
+    I’m passionate about IT, especially programming, and experienced in security products.  
+    <br><br><em>“You never try, you never know”</em> — my guiding principle in every job & task.
+  </p>
+</section>
 
-      <div class="project-card">
-        <img class="logo" src="udrive.png" alt="udrive">
-        <a href="https://udrive.co.id"  target="_blank">Develop company profile udrive.co.id</a>
-      </div>
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt=""><b>Java</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg" alt=""><b>JavaScript</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt=""><b>Python</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/php.svg" alt=""><b>PHP</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spring.svg" alt=""><b>Spring Boot</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/csharp.svg" alt=""><b>C#</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powershell.svg" alt=""><b>PowerShell</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gnubash.svg" alt=""><b>Bash</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt=""><b>MySQL</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/oracle.svg" alt=""><b>Oracle</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftsqlserver.svg" alt=""><b>MSSQL</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt=""><b>PostgreSQL</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" alt=""><b>Ansible</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt=""><b>Jenkins</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt=""><b>Kubernetes</b></div>
+    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt=""><b>Docker</b></div>
+  </div>
+</section>
 
-      <div class="project-card">
-        <img class="logo" src="acc.jpg" alt="ACC">
-        Assistant Engineer for implementation CyberArk PAM
-      </div>
+<section>
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card"><img src="scrapping.png" alt=""><b>Website Scraping Script</b></div>
+    <div class="card"><img src="ds.png" alt=""><b>Digital Signage Web</b></div>
+    <div class="card"><img src="i-mec.png" alt=""><a href="https://i-mec.id" target="_blank"><b>i-mec.id</b></a></div>
+    <div class="card"><img src="vistakom.png" alt=""><a href="https://vistakom-infomedia.com" target="_blank"><b>vistakom-infomedia</b></a></div>
+    <div class="card"><img src="udrive.png" alt=""><a href="https://udrive.co.id" target="_blank"><b>udrive.co.id</b></a></div>
+    <div class="card"><img src="acc.jpg" alt=""><b>CyberArk PAM — ACC</b></div>
+    <div class="card"><img src="bca.png" alt=""><b>CyberArk PAM — BCA</b></div>
+    <div class="card"><img src="hibank.png" alt=""><b>CyberArk PAM — Hibank</b></div>
+  </div>
+</section>
 
-      <div class="project-card">
-        <img class="logo" src="bca.png" alt="BCA">
-        Assistant Engineer for implementation CyberArk PAM
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="bca.png" alt="BCA">
-        Lead Engineer for implementation CyberArk Secrets Manager CP/CCP
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="bca.png" alt="BCA">
-        Lead Engineer for implementation CyberArk Secrets Manager Conjur
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="hibank.png" alt="Hibank">
-        Lead Engineer for implementation CyberArk PAM
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="bri.png" alt="BRI">
-        Assistant Engineer for implementation CyberArk Secrets Manager Conjur
-      </div>
-
-      <div class="project-card">
-        <img class="logo" src="dharma.jpg" alt="Dharma">
-        Lead Engineer for PoC Xage Security
-      </div>
-
-    </div>
-  </section>
 <section>
   <h2>Certificates</h2>
-  <div class="projects-grid">
-    
-    <div class="project-card">
-      <img class="logo" src="aqua.png" alt="aqua">
-      <b>Implementation Specialist — Aqua Security</b>
-    </div>
-
-    <div class="project-card">
-      <img class="logo" src="silverfort.jpg" alt="silverfort">
-      <b>Presales Engineer — Silverfort</b>
-    </div>
-    
-    <div class="project-card">
-      <img class="logo" src="xage.png" alt="xage">
-      <b>Implementation Specialist — Silverfort</b>
-    </div>
-    
-    <div class="project-card">
-      <img class="logo" src="cyberark.png" alt="CyberArk Trustee">
-      <b>Trustee — CyberArk PAM</b>
-    </div>
-
-    <div class="project-card">
-      <img class="logo" src="cyberark.png" alt="CyberArk Defender">
-      <b>Defender — CyberArk PAM</b>
-    </div>
-
-    <div class="project-card">
-      <img class="logo" src="cyberark.png" alt="CyberArk Sentry">
-      <b>Sentry — CyberArk Secrets Manager</b>
-    </div>
-
-    <div class="project-card">
-      <img class="logo" src="cyberark.png" alt="CyberArk CDE">
-      <b>CDE — CyberArk Secrets Manager</b>
-    </div>
-
+  <div class="projects">
+    <div class="card"><img src="aqua.png" alt=""><b>Aqua Security</b></div>
+    <div class="card"><img src="silverfort.jpg" alt=""><b>Silverfort</b></div>
+    <div class="card"><img src="xage.png" alt=""><b>Xage Security</b></div>
+    <div class="card"><img src="cyberark.png" alt=""><b>CyberArk CDE</b></div>
   </div>
 </section>
 
 </div>
 
 <footer>
-  &copy; 2025
+  &copy; 2025 Chandra. All rights reserved.
 </footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.card').forEach(card => {
+    if (card.getBoundingClientRect().top < window.innerHeight - 50) {
+      card.classList.add('visible');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
