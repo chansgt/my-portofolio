@@ -11,9 +11,28 @@
   header h1 { margin: 0; font-size: 3rem; }
   header p { margin-top: 0.5rem; font-size: 1.2rem; }
 
-  .socials { margin: 1rem 0; text-align: center; }
-  .socials a { margin: 0 10px; text-decoration: none; color: #fff; font-weight: bold; background: #2575fc; padding: 0.3rem 0.8rem; border-radius: 5px; }
-  .socials a:hover { background: #6a11cb; }
+  .socials a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #2575fc;
+    font-weight: bold;
+    border: 2px solid #2575fc;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    transition: all 0.3s ease;
+  }
+  .socials a:hover {
+    background: #2575fc;
+    color: #fff;
+  }
+  .socials img {
+    width: 20px;
+    height: 20px;
+  }
 
   .container { max-width: 1000px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
   section { margin-bottom: 2rem; }
@@ -35,16 +54,23 @@
   <h1>Hi, my name is Chandra</h1>
   <p>Developer and Consultant IT Security</p>
 
-  <div class="socials">
-    <a href="www.linkedin.com/in/chandra-sugiatno-m">LinkedIn</a>
-    <a href="https://github.com/chansgt">GitHub</a>
-  </div>
+<div class="socials">
+  <a href="https://www.linkedin.com/in/chandra-sugiatno-m" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+    LinkedIn
+  </a>
+  <a href="https://github.com/chansgt" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+    GitHub
+  </a>
+</div>
+  
 </header>
 
 <div class="container">
 
   <section>
-    <h2>Proyek</h2>
+    <h2>Project</h2>
     <div class="projects-grid">
 
       <div class="project-card">
