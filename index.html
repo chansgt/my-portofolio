@@ -16,29 +16,83 @@ body {
   font-family: 'Poppins', sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+  
+body.light {
+--bg: #fff;
+--text: #000;
+--highlight: #0704cc;
+}
+  
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 header {
-  text-align: center;
-  padding: 10rem 1rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
-header h1 {
+header .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+header nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+header .toggle {
+  cursor: pointer;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+.hero h1 {
   font-size: 3rem;
   max-width: 700px;
-  margin: 0 auto;
 }
-header .highlight {
+.hero .highlight {
   color: var(--highlight);
 }
-header .links {
+.hero .links {
   margin-top: 2rem;
 }
-header .links a {
+.hero .links a {
+  margin: 0 1rem;
   color: var(--highlight);
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: bold;
+  transition: color 0.3s;
 }
-header .links a:hover {
+.hero .links a:hover {
   color: var(--text);
 }
 
@@ -94,6 +148,26 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+@media(max-width: 768px) {
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  header nav.show {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+  
 </style>
 </head>
 
@@ -247,11 +321,42 @@ a:hover {
     <div><img src="cyberark.png" alt=""><br><b>CDE</b><br>CyberArk Secrets Manager</div>
   </div>
 </section>
-</div>
 
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: chandra@example.com</p>
+</section>
+  
+</div>
+  
+
+  
 <footer>
   &copy; 2025 Chandra. All rights reserved.
 </footer>
+  
+<script>
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.onclick = () => {
+  document.body.classList.toggle('light');
+};
 
+// hamburger
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+menuToggle.onclick = () => {
+  nav.classList.toggle('show');
+};
+
+// fade-in animation
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('section').forEach(section => {
+    if (section.getBoundingClientRect().top < window.innerHeight - 50) {
+      section.classList.add('visible');
+    }
+  });
+});
+</script>
+  
 </body>
 </html>
