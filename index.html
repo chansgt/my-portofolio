@@ -148,7 +148,44 @@ a {
 a:hover {
   text-decoration: underline;
 }
+#projects ul {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+#projects li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+  text-align: center;
+  justify-content: center;
+}
 
+.arrow-down {
+  margin-top: 2rem;
+  text-align: center;
+}
+.arrow-down a {
+  color: var(--highlight);
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.arrow-down a:hover {
+  color: var(--text);
+}
+.read-more .arrow {
+  display: block;
+  font-size: 2rem;
+  margin-top: 0.2rem;
+}
+  
 @media(max-width: 768px) {
   header nav {
     display: none;
@@ -191,23 +228,24 @@ a:hover {
   <h1>
     Securing your <span class="highlight">Environment</span> and turning your ideas into <span class="highlight">Real Life</span> is my job.
   </h1>
-  <div class="links">
-    <i class="fas fa-arrow-down" style="font-size: 2.8vmin;"></i>
+  <div class="arrow-down">
+    <a href="#introduction">
+      <span class="arrow">↓</span>
+    </a>
   </div>
 </div>
 
-<div class="hero">
+<div class="hero" id="introduction">
   <h1>
     You never <span class="highlight">TRY</span> You never <span class="highlight">LEARN.</span>
   </h1>
   <p style="alignment: center">Those were the words my lecturer said to me when I was still in college, and they have motivated me to get this far.
 
 Always delivering the best results — both from a Developer’s and an IT Security perspective — continuously learning to keep up with the times, and having sufficient experience to help you achieve your goals.</p>
-  <div class="links">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
+  <div class="arrow-down">
+    <a href="#skills">
+      <span class="arrow">↓</span>
+    </a>
   </div>
 </div>
 
@@ -253,17 +291,8 @@ Always delivering the best results — both from a Developer’s and an IT Secur
 
 <section id="projects">
   <h2>Projects</h2>
-    <ul style="
-      max-width:800px;
-      margin:0 auto;
-      padding:0;
-      list-style:none;
-      display:flex;
-      flex-direction:column;
-      gap:1rem;
-      align-items:center;
-  ">
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <ul>
+    <li>
       <img src="scrapping.png" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>Freelance</b> — <em>Developer</em><br>
@@ -271,7 +300,7 @@ Always delivering the best results — both from a Developer’s and an IT Secur
       </div>
     </li>
 
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <li>
       <img src="ds.png" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>Freelance</b> — <em>Developer</em><br>
@@ -279,7 +308,7 @@ Always delivering the best results — both from a Developer’s and an IT Secur
       </div>
     </li>
 
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <li>
       <img src="i-mec.png" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>I-MEC</b> — <em>Developer</em><br>
@@ -287,7 +316,7 @@ Always delivering the best results — both from a Developer’s and an IT Secur
       </div>
     </li>
 
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <li>
       <img src="vistakom.png" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>Vistakom Infomedia</b> — <em>Developer</em><br>
@@ -295,7 +324,7 @@ Always delivering the best results — both from a Developer’s and an IT Secur
       </div>
     </li>
 
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <li>
       <img src="udrive.png" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>UDrive</b> — <em>Developer</em><br>
@@ -303,7 +332,7 @@ Always delivering the best results — both from a Developer’s and an IT Secur
       </div>
     </li>
 
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <li>
       <img src="acc.jpg" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>ACC</b> — <em>Assistant Engineer</em><br>
@@ -311,7 +340,7 @@ Always delivering the best results — both from a Developer’s and an IT Secur
       </div>
     </li>
 
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <li>
       <img src="bca.png" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>BCA</b> — <em>Assistant Engineer</em><br>
@@ -319,7 +348,7 @@ Always delivering the best results — both from a Developer’s and an IT Secur
       </div>
     </li>
 
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <li>
       <img src="hibank.png" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>HiBank</b> — <em>Lead Engineer</em><br>
@@ -327,7 +356,7 @@ Always delivering the best results — both from a Developer’s and an IT Secur
       </div>
     </li>
 
-    <li style="display:flex;align-items:center;gap:10px;margin-bottom:1rem;">
+    <li>
       <img src="dharma.jpg" alt="" style="width:32px;height:32px;object-fit:contain;">
       <div>
         <b>Dharma</b> — <em>Lead Engineer</em><br>
