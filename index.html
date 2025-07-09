@@ -3,189 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chandra | Developer & IT Security Consultant</title>
+<title>Chandra | Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 <style>
+:root {
+  --bg: #000;
+  --text: #fff;
+  --highlight: #a855f7;
+}
+body.light {
+  --bg: #fff;
+  --text: #000;
+  --highlight: #a855f7;
+}
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f9f9f9;
-  color: #333;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 header {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
-  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
-header img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-}
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-header p {
-  margin-top: 0.5rem;
+header .logo {
+  font-weight: bold;
   font-size: 1.2rem;
 }
-
-.container {
-  max-width: 900px;
-  margin: 2rem auto;
+header nav {
+  display: flex;
+  gap: 1rem;
+}
+header nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+header .toggle {
+  cursor: pointer;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 0 1rem;
 }
-
+.hero h1 {
+  font-size: 3rem;
+  max-width: 700px;
+}
+.hero .highlight {
+  color: var(--highlight);
+}
+.hero .links {
+  margin-top: 2rem;
+}
+.hero .links a {
+  margin: 0 1rem;
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.hero .links a:hover {
+  color: var(--text);
+}
 section {
-  margin-bottom: 3rem;
-}
-
-h2 {
-  text-align: center;
-  color: #66a6ff;
-  margin-bottom: 1rem;
-}
-
-.skills, .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-  text-align: center;
-}
-
-.card {
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding: 4rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
   opacity: 0;
   transform: translateY(20px);
+  transition: all 0.8s ease;
 }
-.card.visible {
+section.visible {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
 }
-.card img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
-.card b {
-  display: block;
-  margin-top: 0.5rem;
-}
-
-footer {
+section h2 {
+  color: var(--highlight);
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #999;
+  margin-bottom: 1rem;
 }
-
-a {
-  color: #66a6ff;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-.socials {
-  margin-top: 1rem;
-}
-.socials a {
-  margin: 0 0.5rem;
-  color: white;
-  font-weight: bold;
+@media(max-width: 768px) {
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  header nav.show {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="foto.jpg" alt="Chandra">
-  <h1>Hi, I’m Chandra</h1>
-  <p>Developer & IT Security Consultant</p>
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/chandra-sugiatno-m" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/chansgt" target="_blank">GitHub</a>
+  <div class="logo">Chandra</div>
+  <nav id="nav">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div>
+    <span class="toggle" id="themeToggle">🌓</span>
+    <span class="toggle" id="menuToggle">☰</span>
   </div>
 </header>
 
-<div class="container">
-
-<section>
-  <h2>Introduction</h2>
-  <p style="text-align:center; max-width:600px; margin:0 auto;">
-    I’m passionate about IT, especially programming, and experienced in security products.  
-    <br><br><em>“You never try, you never know”</em> — my guiding principle in every job & task.
-  </p>
-</section>
-
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/java.svg" alt=""><b>Java</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg" alt=""><b>JavaScript</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt=""><b>Python</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/php.svg" alt=""><b>PHP</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spring.svg" alt=""><b>Spring Boot</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/csharp.svg" alt=""><b>C#</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/powershell.svg" alt=""><b>PowerShell</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gnubash.svg" alt=""><b>Bash</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mysql.svg" alt=""><b>MySQL</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/oracle.svg" alt=""><b>Oracle</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftsqlserver.svg" alt=""><b>MSSQL</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt=""><b>PostgreSQL</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ansible.svg" alt=""><b>Ansible</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jenkins.svg" alt=""><b>Jenkins</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kubernetes.svg" alt=""><b>Kubernetes</b></div>
-    <div class="card"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/docker.svg" alt=""><b>Docker</b></div>
+<div class="hero">
+  <h1>
+    turning ideas into real life <span class="highlight">products</span> is my calling.
+  </h1>
+  <div class="links">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
   </div>
-</section>
-
-<section>
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="card"><img src="scrapping.png" alt=""><b>Website Scraping Script</b></div>
-    <div class="card"><img src="ds.png" alt=""><b>Digital Signage Web</b></div>
-    <div class="card"><img src="i-mec.png" alt=""><a href="https://i-mec.id" target="_blank"><b>i-mec.id</b></a></div>
-    <div class="card"><img src="vistakom.png" alt=""><a href="https://vistakom-infomedia.com" target="_blank"><b>vistakom-infomedia</b></a></div>
-    <div class="card"><img src="udrive.png" alt=""><a href="https://udrive.co.id" target="_blank"><b>udrive.co.id</b></a></div>
-    <div class="card"><img src="acc.jpg" alt=""><b>CyberArk PAM — ACC</b></div>
-    <div class="card"><img src="bca.png" alt=""><b>CyberArk PAM — BCA</b></div>
-    <div class="card"><img src="hibank.png" alt=""><b>CyberArk PAM — Hibank</b></div>
-  </div>
-</section>
-
-<section>
-  <h2>Certificates</h2>
-  <div class="projects">
-    <div class="card"><img src="aqua.png" alt=""><b>Aqua Security</b></div>
-    <div class="card"><img src="silverfort.jpg" alt=""><b>Silverfort</b></div>
-    <div class="card"><img src="xage.png" alt=""><b>Xage Security</b></div>
-    <div class="card"><img src="cyberark.png" alt=""><b>CyberArk CDE</b></div>
-  </div>
-</section>
-
 </div>
 
-<footer>
-  &copy; 2025 Chandra. All rights reserved.
-</footer>
+<section id="projects">
+  <h2>Projects</h2>
+  <p>Daftar project Anda di sini…</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p>Daftar skills Anda di sini…</p>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <p>Daftar sertifikat Anda di sini…</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: chandra@example.com</p>
+</section>
 
 <script>
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.onclick = () => {
+  document.body.classList.toggle('light');
+};
+
+// hamburger
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+menuToggle.onclick = () => {
+  nav.classList.toggle('show');
+};
+
+// fade-in animation
 window.addEventListener('scroll', () => {
-  document.querySelectorAll('.card').forEach(card => {
-    if (card.getBoundingClientRect().top < window.innerHeight - 50) {
-      card.classList.add('visible');
+  document.querySelectorAll('section').forEach(section => {
+    if (section.getBoundingClientRect().top < window.innerHeight - 50) {
+      section.classList.add('visible');
     }
   });
 });
